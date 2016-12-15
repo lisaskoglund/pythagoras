@@ -1,6 +1,6 @@
 package view;
 
-import dao.FacilityDAOImpl;
+import dao.impl.FacilityDAOImpl;
 import java.util.List;
 
 import javax.ws.rs.GET;

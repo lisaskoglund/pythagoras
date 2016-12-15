@@ -14,7 +14,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- * JPA entity class for Building
+ * JPA entity class for Building. Primary key is auto incremented id. Relation
+ * to Floor through buildingId (Building) --> BUILDING_ID (Floor). Relation made
+ * in JPA with JoinColumn and OneToMany annotations.
  *
  * @author lisanoren
  */
@@ -28,7 +30,6 @@ public class Building implements Serializable {
     private Long id;
     @Column(name = "buildingName")
     private String buildingName;
-    //@OneToMany(mappedBy = "BUILDING_ID", targetEntity=Floor.class)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "BUILDING_ID", referencedColumnName = "id")
     List<Floor> floorList;

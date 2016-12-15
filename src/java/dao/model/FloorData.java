@@ -13,6 +13,13 @@ public class FloorData implements Serializable {
     private String floorName, buildingName;
     private int area;
 
+    
+    public FloorData(String buildingName, String floorName, int area) {
+        this.buildingName = buildingName;
+        this.floorName = floorName;
+        this.area = area;
+    }
+    
     public String getFloorName() {
         return floorName;
     }
@@ -34,12 +41,6 @@ public class FloorData implements Serializable {
     }
 
     public void setArea(int area) {
-        this.area = area;
-    }
-
-    public FloorData(String buildingName, String floorName, int area) {
-        this.buildingName = buildingName;
-        this.floorName = floorName;
         this.area = area;
     }
 }

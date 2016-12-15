@@ -9,7 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * JPA entity class for Floor
+ * JPA entity class for Floor. Primary Key is id (auto incremented). Relation to
+ * building: BUILDING_ID (table: Floor) --> buildingId (table: Building).
+ * Relation is expressed in Building with a JoinColumn and OneToMany annotations
  *
  * @author lisanoren
  */
@@ -82,5 +84,4 @@ public class Floor implements Serializable {
     public String toString() {
         return "model.Floor[ id=" + id + " ]";
     }
-
 }

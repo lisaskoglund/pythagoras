@@ -9,6 +9,7 @@ import util.HibernateUtil;
 
 /**
  * Initializes DB and sets data
+ *
  * @author lisanoren
  */
 public class InitializeDB {
@@ -30,7 +31,6 @@ public class InitializeDB {
         Floor floorB2 = new Floor();
         Floor floorB3 = new Floor();
 
-        
         floorA1.setFloorName("PlanA1");
         floorA2.setFloorName("PlanA2");
         floorB1.setFloorName("PlanB1");
@@ -56,9 +56,9 @@ public class InitializeDB {
 
         session.save(buildingA);
         session.save(buildingB);
-        
+
         session.save(floorA1);
-        
+
         session.getTransaction().commit();
         session.close();
     }
